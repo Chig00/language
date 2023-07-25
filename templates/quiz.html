@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Learn a Language! </title>
+        <link rel = "stylesheet" href = "/static/index.css">
+    </head>
+    
+    <body>
+        <h1> {{topic}} </h1>
+        
+        <a href = "{{back}}"> Return </a>
+        
+        {% if mode == "from" and language == "Igbo" %}
+        <p> Special characters: ị ọ ụ </p>
+        {% else %}
+        <br><br>
+        {% endif %}
+        
+        <form onkeyup = "checkKey(event)">
+            {% for i in range(questions|length) %}
+            {{questions[i]}} <br> <input id = "form{{i}}" class = "wide"> <br><br>
+            {% endfor %}
+            
+            <input type = "button" value = "Submit" onclick = "check()">
+        </form>
+        
+        <script>
+            const ANSWERS = [
+                {% for a in answers %}
+                "{{a}}",
+                {% endfor %}
+            ];
+        </script>
+        
+        <script src = "/static/index.js"></script>
+        <script src = "/static/quiz.js"></script>
+    </body>
+</html>

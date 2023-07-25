@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Learn a Language! </title>
+        <link rel = "stylesheet" href = "/static/index.css">
+    </head>
+    
+    <body>
+        <h1> {{topic_name}} </h1>
+        
+        {% if back != None %}
+        <a href = "{{back}}"> Return </a> <br><br>
+        {% endif%}
+        
+        {% for t in topics %}
+        <a href = "/{{path}}{{t}}"> {{t}} </a> <br>
+        {% endfor %}
+        
+        <script src = "/static/index.js"></script>
+    </body>
+</html>

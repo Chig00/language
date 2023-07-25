@@ -1,0 +1,18 @@
+body, input, a {
+    color: white;
+    background-color: black;
+}
+
+table, .wide {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    width: 50%;
+}
