@@ -20,6 +20,8 @@ TOPIC_END = -len(TOPIC_SUFFIX)
 TO_ENGLISH = "to"
 FROM_ENGLISH = "from"
 
+random.seed()
+
 app = flask.Flask(__name__)
 
 def make_dict(path):
